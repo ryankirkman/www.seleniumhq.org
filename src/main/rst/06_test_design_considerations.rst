@@ -1,4 +1,3 @@
-
 Test Design Considerations 
 ==========================
 
@@ -669,7 +668,7 @@ So now, the login test would use these two page objects as follows.
 	}
 
 There is a lot of flexibility in how the page objects may be designed, but there are a few basic rules for getting the desired maintainability of your test code.	
-Page objects themselves should never be make verifications or assertions. This is part of your test and should always be within the test's code, never in an page object. The page object will contain the representation of the page, and the services the page provides via methods but no code related to what is being tested should be within the page object.
+Page objects themselves should never make verifications or assertions. This is part of your test and should always be within the test's code, never in a page object. The page object will contain the representation of the page, and the services the page provides via methods but no code related to what is being tested should be within the page object.
 
 There is one, single, verification which can, and should, be within the page object and that is to verify that the page, and possibly critical elements on the page, were loaded correctly.  This verification should be done while instantiating the page object. In the examples above, both the SignInPage and HomePage constructors check that the expected page is available and ready for requests from the test.
 
